@@ -63,8 +63,11 @@ const CompanyStockInfo = () => {
     };
 
     const getChartData = async () => {
-        const response = await fetch(`/companies/${params.stockSymbol}/score`);
+        let response = await fetch(`/companies/${params.stockSymbol}/score`);
         const companyChartData = await response.json();
+
+        response = await fetch(`/companies/score`);
+        const companyChartData2 = await response.json();
 
         const data = {
             labels: [
@@ -77,7 +80,7 @@ const CompanyStockInfo = () => {
             ],
             datasets: [
                 {
-                    label: 'Score',
+                    label: 'ESG Score',
                     data: [
                         companyChartData.carbonEmissions,
                         companyChartData.renewableEnergyUsage,
@@ -90,6 +93,20 @@ const CompanyStockInfo = () => {
                     borderColor: 'rgba(255, 99, 132, 1)',
                     borderWidth: 1,
                 },
+                {
+                    label: 'Average ESG Score',
+                    data: [
+                        companyChartData2.carbonEmissions,
+                        companyChartData2.renewableEnergyUsage,
+                        companyChartData2.wasteGenerated,
+                        companyChartData2.minorityDiversity,
+                        companyChartData2.nonProfitContributions,
+                        companyChartData2.employeeTurnover,
+                    ],
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1,
+                }
             ],
         };
 
