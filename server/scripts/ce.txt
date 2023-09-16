@@ -1,0 +1,408 @@
+3M: 4850000.0 tonnes of CO2e
+Abbott Laboratories: 900000.0 tonnes of CO2e
+AbbVie: 513000.0 tonnes of CO2e
+ABM Industries: 43000.0 tonnes of CO2e
+No amount found for Activision Blizzard
+Adobe Inc: 44000.0 tonnes of CO2e
+Advance Auto Parts Inc: 334000.0 tonnes of CO2e
+AECOM: 112000.0 tonnes of CO2e
+AES: 43217000.0 tonnes of CO2e
+Aflac: 12000.0 tonnes of CO2e
+AGCO Corporation: 99000.0 tonnes of CO2e
+Air Products and Chemicals: 24200000.0 tonnes of CO2e
+Alaska Air Group: 4180000.0 tonnes of CO2e
+Alcoa Corporation: 23900000.0 tonnes of CO2e
+Alleghany Corporation: 500.0 tonnes of CO2e
+No amount found for Alliance Data
+Allstate Corp: 80000.0 tonnes of CO2e
+Ally Financial: 12000.0 tonnes of CO2e
+Altria: 281000.0 tonnes of CO2e
+Amazon: 14890000.0 tonnes of CO2e
+Ameren Corporation: 31822000.0 tonnes of CO2e
+American Airlines Group Inc: 20081000.0 tonnes of CO2e
+American Axle: 463000.0 tonnes of CO2e
+American Electric Power: 49713000.0 tonnes of CO2e
+American Express: 22000.0 tonnes of CO2e
+No amount found for American Financial Group
+American International Group: 100000.0 tonnes of CO2e
+American Tower: 1142000.0 tonnes of CO2e
+Ameriprise Financial: 20000.0 tonnes of CO2e
+AmerisourceBergen: 108000.0 tonnes of CO2e
+Amgen: 243000.0 tonnes of CO2e
+No amount found for Amphenol Corporation
+APA Corporation: 6770000.0 tonnes of CO2e
+Apple: 47000.0 tonnes of CO2e
+Applied Materials: 129000.0 tonnes of CO2e
+Aramark: 387000.0 tonnes of CO2e
+Archer-Daniels-Midland Company: 16230000.0 tonnes of CO2e
+No amount found for Arrow Electronics
+No amount found for Arthur J. Gallagher & Co
+No amount found for Asbury Automotive Group
+Assurant, Inc: 18000.0 tonnes of CO2e
+No amount found for AT&T
+Autoliv: 413000.0 tonnes of CO2e
+Automatic Data Processing: 99000.0 tonnes of CO2e
+No amount found for AutoNation, Inc
+AutoZone: 424000.0 tonnes of CO2e
+AvalonBay Communities: 69000.0 tonnes of CO2e
+Avery Dennison: 402000.0 tonnes of CO2e
+Avis Budget Group: 4958000.0 tonnes of CO2e
+Avnet: 32000.0 tonnes of CO2e
+Ball Corporation: 1112000.0 tonnes of CO2e
+Bank of America: 61000.0 tonnes of CO2e
+Bank of New York Mellon: 8400.0 tonnes of CO2e
+Baxter: 600000.0 tonnes of CO2e
+Becton, Dickinson and Company: 433000.0 tonnes of CO2e
+No amount found for Bed Bath & Beyond Inc
+Berry Global: 2265000.0 tonnes of CO2e
+Best Buy: 401000.0 tonnes of CO2e
+Biogen Inc: 95000.0 tonnes of CO2e
+BlackRock: 5500.0 tonnes of CO2e
+Blackstone Group: 8200.0 tonnes of CO2e
+Boeing: 1185000.0 tonnes of CO2e
+Booking Holdings Inc: 20000.0 tonnes of CO2e
+No amount found for Booz Allen Hamilton
+BorgWarner Inc: 529000.0 tonnes of CO2e
+Boston Scientific Corporation: 54000.0 tonnes of CO2e
+Bristol Myers Squibb: 278000.0 tonnes of CO2e
+No amount found for Builders FirstSource
+Burlington Stores: 175000.0 tonnes of CO2e
+C.H. Robinson Worldwide, Inc: 28000.0 tonnes of CO2e
+No amount found for Campbell Soup
+Capital One Financial Corporation: 8800.0 tonnes of CO2e
+No amount found for Cardinal Health
+CarMax: 168000.0 tonnes of CO2e
+No amount found for Casey's
+Caterpillar: 1460000.0 tonnes of CO2e
+CBRE Group, Inc: 83000.0 tonnes of CO2e
+CDW Corporation: 20000.0 tonnes of CO2e
+Celanese Corporation: 3647000.0 tonnes of CO2e
+Centene Corporation: 146000.0 tonnes of CO2e
+CenterPoint Energy: 5296000.0 tonnes of CO2e
+Charles Schwab Corporation: 52000.0 tonnes of CO2e
+No amount found for Charter Communications
+Cheniere Energy: 6344000.0 tonnes of CO2e
+Chesapeake Energy: 1919000.0 tonnes of CO2e
+Chevron Corp: 63000000.0 tonnes of CO2e
+Cigna: 126000.0 tonnes of CO2e
+Cincinnati Financial: 24000.0 tonnes of CO2e
+No amount found for Cintas
+No amount found for Cisco Systems
+Citigroup: 508000.0 tonnes of CO2e
+Citizens Financial: 43000.0 tonnes of CO2e
+Clorox Co: 260000.0 tonnes of CO2e
+CMS Energy Corporation: 15128000.0 tonnes of CO2e
+Coca-Cola Company: 4770000.0 tonnes of CO2e
+Cognizant: 108000.0 tonnes of CO2e
+Colgate-Palmolive: 459000.0 tonnes of CO2e
+Comcast: 2223000.0 tonnes of CO2e
+No amount found for Community Health Systems
+No amount found for Conagra Brands
+No amount found for ConocoPhillips
+Consolidated Edison: 3661000.0 tonnes of CO2e
+No amount found for Constellation Brands
+No amount found for Corning Inc
+Costco: 2615000.0 tonnes of CO2e
+No amount found for Coty Inc
+Crown Holdings, Inc: 1343000.0 tonnes of CO2e
+CSX Corporation: 4000000.0 tonnes of CO2e
+Cummins: 594000.0 tonnes of CO2e
+CVS: 1143000.0 tonnes of CO2e
+D. R. Horton: 103000.0 tonnes of CO2e
+Dana Incorporated: 546000.0 tonnes of CO2e
+Danaher: 375000.0 tonnes of CO2e
+No amount found for Darden Restaurants
+DaVita Inc: 222000.0 tonnes of CO2e
+DCP Midstream: 8664000.0 tonnes of CO2e
+No amount found for Deere & Company
+Delek US: 2600000.0 tonnes of CO2e
+Delta Air Lines: 17449000.0 tonnes of CO2e
+Devon Energy: 4230000.0 tonnes of CO2e
+Dick's Sporting Goods: 215000.0 tonnes of CO2e
+No amount found for Dillard's
+Discover Financial Services: 40000.0 tonnes of CO2e
+No amount found for DISH Network Corporation
+Dollar General: 1618000.0 tonnes of CO2e
+Dollar Tree: 1351000.0 tonnes of CO2e
+No amount found for Dominion Energy
+Dover Corp: 88000.0 tonnes of CO2e
+DTE Energy Company: 29243000.0 tonnes of CO2e
+Duke Energy: 74006000.0 tonnes of CO2e
+No amount found for DXC Technology
+No amount found for Eastman Chemical Company
+eBay: 67000.0 tonnes of CO2e
+Ecolab: 373000.0 tonnes of CO2e
+Edison International: 2200000.0 tonnes of CO2e
+No amount found for Eli Lilly and Company
+No amount found for EMCOR
+Emerson Electric Co: 795000.0 tonnes of CO2e
+Entergy Corporation: 33020000.0 tonnes of CO2e
+Enterprise Products: 10800000.0 tonnes of CO2e
+EOG Resources: 4900000.0 tonnes of CO2e
+No amount found for Estee Lauder
+No amount found for Eversource Energy
+Exelon Corp: 12970000.0 tonnes of CO2e
+Expedia Group: 25000.0 tonnes of CO2e
+Expeditors International: 54000.0 tonnes of CO2e
+ExxonMobil: 125000000.0 tonnes of CO2e
+No amount found for Fannie Mae
+No amount found for FedEx
+Fidelity National Financial: 2200.0 tonnes of CO2e
+Fidelity National Information: 88000.0 tonnes of CO2e
+Fifth Third Bancorp: 13000.0 tonnes of CO2e
+First American Financial Corporation: 4400.0 tonnes of CO2e
+FirstEnergy Corp: 15806000.0 tonnes of CO2e
+Fiserv: 142000.0 tonnes of CO2e
+Fluor: 47000.0 tonnes of CO2e
+Foot Locker: 72000.0 tonnes of CO2e
+Ford Motor: 3600000.0 tonnes of CO2e
+Fortive Corporation: 59000.0 tonnes of CO2e
+Franklin Templeton Investments: 31000.0 tonnes of CO2e
+No amount found for Freddie Mac
+Freeport-McMoRan Inc: 7090000.0 tonnes of CO2e
+No amount found for GameStop Corp
+Gap Inc: 248000.0 tonnes of CO2e
+General Dynamics Corporation: 762000.0 tonnes of CO2e
+General Electric Company: 2080000.0 tonnes of CO2e
+No amount found for General Mills
+General Motors Company: 3814000.0 tonnes of CO2e
+Genuine Parts Company: 101000.0 tonnes of CO2e
+No amount found for Genworth Financial
+Gilead Sciences: 80000.0 tonnes of CO2e
+No amount found for Global Partners
+Goldman Sachs: 14000.0 tonnes of CO2e
+Goodyear: 2244000.0 tonnes of CO2e
+No amount found for Group 1 Automotive
+Halliburton: 2818000.0 tonnes of CO2e
+Hanesbrands: 174000.0 tonnes of CO2e
+No amount found for Hartford Financial Services
+HCA Healthcare: 2068000.0 tonnes of CO2e
+Henry Schein: 28000.0 tonnes of CO2e
+Hertz Corporation: 3361000.0 tonnes of CO2e
+Hewlett Packard Enterprise: 194000.0 tonnes of CO2e
+HF Sinclair: 6052000.0 tonnes of CO2e
+Hilton Worldwide Holdings: 1718000.0 tonnes of CO2e
+Honeywell International: 2248000.0 tonnes of CO2e
+Hormel: 731000.0 tonnes of CO2e
+HP Inc: 171000.0 tonnes of CO2e
+Humana: 106000.0 tonnes of CO2e
+No amount found for Huntington Ingalls Industries
+Huntsman Corporation: 1081000.0 tonnes of CO2e
+IBM: 621000.0 tonnes of CO2e
+No amount found for Icahn Enterprises
+Illinois Tool Works: 541000.0 tonnes of CO2e
+Ingredion: 3409000.0 tonnes of CO2e
+No amount found for Insight Enterprises
+Intel: 2882000.0 tonnes of CO2e
+Intercontinental Exchange: 6700.0 tonnes of CO2e
+International Paper: 11112000.0 tonnes of CO2e
+J.B. Hunt Transport Services: 1908000.0 tonnes of CO2e
+Jabil: 994000.0 tonnes of CO2e
+JetBlue Airways Corporation: 4087000.0 tonnes of CO2e
+No amount found for Johnson & Johnson
+Jones Lang LaSalle: 36000.0 tonnes of CO2e
+No amount found for JPMorgan Chase & Co
+Kellogg's: 904000.0 tonnes of CO2e
+KeyCorp: 49000.0 tonnes of CO2e
+Kimberly-Clark Corp: 3686000.0 tonnes of CO2e
+Kinder Morgan: 18000.0 tonnes of CO2e
+No amount found for KKR & Co Inc
+Kohl's: 393000.0 tonnes of CO2e
+Kroger: 5276000.0 tonnes of CO2e
+Labcorp: 332000.0 tonnes of CO2e
+Lam Research: 113000.0 tonnes of CO2e
+Las Vegas Sands Corp: 523000.0 tonnes of CO2e
+Lear Corporation: 428000.0 tonnes of CO2e
+Leidos Holdings Inc: 49000.0 tonnes of CO2e
+No amount found for Lennar Corporation
+Lincoln National Corporation: 8500.0 tonnes of CO2e
+Lithia Motors, Inc: 57000.0 tonnes of CO2e
+No amount found for Live Nation Entertainment
+LKQ Corporation: 203000.0 tonnes of CO2e
+Lockheed Martin Corporation: 791000.0 tonnes of CO2e
+No amount found for Loews Corporation
+Lowe's: 1902000.0 tonnes of CO2e
+No amount found for M&T Bank
+Macy's: 404000.0 tonnes of CO2e
+ManpowerGroup Inc: 28000.0 tonnes of CO2e
+Marathon Petroleum: 40200000.0 tonnes of CO2e
+No amount found for Markel Corporation
+Marriott International: 5166000.0 tonnes of CO2e
+No amount found for Marsh & McLennan Companies
+Masco: 128000.0 tonnes of CO2e
+No amount found for MasTec
+Mastercard: 56000.0 tonnes of CO2e
+McDonald's: 529000.0 tonnes of CO2e
+No amount found for McKesson Corp
+No amount found for Merck & Co
+Meta Platforms Inc: 38000.0 tonnes of CO2e
+MetLife: 38000.0 tonnes of CO2e
+MGM Resorts International: 709000.0 tonnes of CO2e
+Micron Technology: 7141000.0 tonnes of CO2e
+No amount found for Microsoft
+Mohawk Industries: 2627000.0 tonnes of CO2e
+No amount found for Molina Healthcare
+Molson Coors Beverage Company: 1018000.0 tonnes of CO2e
+Mondelez International: 1527000.0 tonnes of CO2e
+Morgan Stanley: 181000.0 tonnes of CO2e
+Motorola Solutions: 79000.0 tonnes of CO2e
+No amount found for Murphy USA
+Navistar International: 175000.0 tonnes of CO2e
+No amount found for NCR Corporation
+NetApp: 64000.0 tonnes of CO2e
+Netflix: 31000.0 tonnes of CO2e
+Newell Brands: 368000.0 tonnes of CO2e
+Newmont Corporation: 3455000.0 tonnes of CO2e
+NextEra Energy: 43327000.0 tonnes of CO2e
+No amount found for NGL Energy Partners LP
+No amount found for Nike
+Nordstrom: 177000.0 tonnes of CO2e
+Norfolk Southern Corporation: 3980000.0 tonnes of CO2e
+Northern Trust Corporation: 26000.0 tonnes of CO2e
+Northrop Grumman Corporation: 762000.0 tonnes of CO2e
+No amount found for NOV Inc
+NRG Energy, Inc: 27726000.0 tonnes of CO2e
+Nucor: 10100000.0 tonnes of CO2e
+Nvidia: 92000.0 tonnes of CO2e
+No amount found for NVR
+O-I Glass: 6137000.0 tonnes of CO2e
+No amount found for O'Reilly Automotive
+Occidental Petroleum Corporation: 23581000.0 tonnes of CO2e
+No amount found for Office Depot
+No amount found for Old Republic International Corporation
+No amount found for Olin Corp
+Omnicom Group: 45000.0 tonnes of CO2e
+ON Semiconductor Corporation: 2948000.0 tonnes of CO2e
+Oneok: 6300000.0 tonnes of CO2e
+Oracle: 430000.0 tonnes of CO2e
+Oshkosh Corporation: 144000.0 tonnes of CO2e
+No amount found for Owens & Minor
+Owens Corning: 3352000.0 tonnes of CO2e
+Paccar: 257000.0 tonnes of CO2e
+Pacific Gas and Electric Corporation: 4120000.0 tonnes of CO2e
+Packaging Corporation of America: 3150000.0 tonnes of CO2e
+Parker Hannifin: 505000.0 tonnes of CO2e
+Paypal Holdings: 25000.0 tonnes of CO2e
+PBF Energy: 86200000.0 tonnes of CO2e
+No amount found for Penske Automotive Group
+PepsiCo: 4410000.0 tonnes of CO2e
+No amount found for Performance Food Group
+Pfizer: 1160000.0 tonnes of CO2e
+Philip Morris International: 413000.0 tonnes of CO2e
+Phillips 66: 30100000.0 tonnes of CO2e
+Pioneer Natural Resources: 1740000.0 tonnes of CO2e
+PNC Financial Services Group Inc: 171000.0 tonnes of CO2e
+Polaris Inc: 107000.0 tonnes of CO2e
+PPG Industries: 800000.0 tonnes of CO2e
+PPL Corp: 25132000.0 tonnes of CO2e
+Principal Financial Group: 22000.0 tonnes of CO2e
+No amount found for Procter & Gamble
+Prudential Financial: 59000.0 tonnes of CO2e
+Public Service Enterprise: 10377000.0 tonnes of CO2e
+No amount found for PulteGroup, Inc
+PVH Corp: 81000.0 tonnes of CO2e
+Qualcomm: 316000.0 tonnes of CO2e
+Quanta Services: 586000.0 tonnes of CO2e
+Quest Diagnostics: 184000.0 tonnes of CO2e
+Qurate Retail Group: 15000.0 tonnes of CO2e
+No amount found for Ralph Lauren
+No amount found for Raymond James Financial
+No amount found for Realogy Holdings
+Regeneron Pharmaceuticals, Inc: 81000.0 tonnes of CO2e
+Regions Financial Corporation: 77000.0 tonnes of CO2e
+No amount found for Reinsurance Group of America
+No amount found for Reliance Steel & Aluminum Co
+Republic Services: 14322000.0 tonnes of CO2e
+Rite Aid: 257000.0 tonnes of CO2e
+Rockwell Automation: 108000.0 tonnes of CO2e
+Ross Stores: 226000.0 tonnes of CO2e
+No amount found for RR Donnelley
+Ryder System, Inc: 766000.0 tonnes of CO2e
+No amount found for S&P Global
+Salesforce: 85000.0 tonnes of CO2e
+Sanmina Corporation: 339000.0 tonnes of CO2e
+Sealed Air Corporation: 465000.0 tonnes of CO2e
+Sempra Energy: 6851000.0 tonnes of CO2e
+Sherwin-Williams Co: 635000.0 tonnes of CO2e
+Simon Property Group: 185000.0 tonnes of CO2e
+No amount found for Sonic Automotive
+Southern Company: 75280000.0 tonnes of CO2e
+No amount found for Southwest Airlines Co
+No amount found for SpartanNash
+Spirit AeroSystems: 329000.0 tonnes of CO2e
+No amount found for Stanley Black & Decker
+Starbucks: 627000.0 tonnes of CO2e
+State Street: 74000.0 tonnes of CO2e
+Steel Dynamics: 3703000.0 tonnes of CO2e
+Stryker Corporation: 165000.0 tonnes of CO2e
+Synchrony Financial: 16000.0 tonnes of CO2e
+No amount found for Synnex
+Sysco Corp: 1155000.0 tonnes of CO2e
+Targa Resources Corp: 10214000.0 tonnes of CO2e
+Target Corporation: 1883000.0 tonnes of CO2e
+No amount found for Tenet Healthcare Corporation
+Tenneco Inc: 1228000.0 tonnes of CO2e
+No amount found for Tesla
+No amount found for Texas Instruments
+Textron Inc: 541000.0 tonnes of CO2e
+The Hershey Company: 286000.0 tonnes of CO2e
+The Home Depot: 1821000.0 tonnes of CO2e
+The Interpublic Group of Companies, Inc: 70000.0 tonnes of CO2e
+The J.M. Smucker Company: 328000.0 tonnes of CO2e
+The Kraft Heinz Company: 1301000.0 tonnes of CO2e
+The Mosaic Company: 4920000.0 tonnes of CO2e
+No amount found for The Progressive Corporation
+The Walt Disney Company: 1296000.0 tonnes of CO2e
+No amount found for Thermo Fisher Scientific
+No amount found for Thor Industries
+TJX Companies: 543000.0 tonnes of CO2e
+No amount found for Toll Brothers
+Tractor Supply Company: 249000.0 tonnes of CO2e
+No amount found for TravelCenters of America
+Travelers Companies: 35000.0 tonnes of CO2e
+Tyson Foods: 6090000.0 tonnes of CO2e
+U.S. Bancorp: 193000.0 tonnes of CO2e
+UGI Corporation: 1270000.0 tonnes of CO2e
+Ulta Beauty: 114000.0 tonnes of CO2e
+Union Pacific Corporation: 9139000.0 tonnes of CO2e
+United Airlines: 15681000.0 tonnes of CO2e
+No amount found for United Natural Foods
+United Rentals: 403000.0 tonnes of CO2e
+UnitedHealth Group: 173000.0 tonnes of CO2e
+Univar Solutions: 134000.0 tonnes of CO2e
+No amount found for Universal Health Services Inc
+Unum Group: 23000.0 tonnes of CO2e
+UPS: 15816000.0 tonnes of CO2e
+US Foods: 709000.0 tonnes of CO2e
+US Steel: 20000000.0 tonnes of CO2e
+Valero Energy: 27500000.0 tonnes of CO2e
+No amount found for Veritiv
+Verizon Communications: 3965000.0 tonnes of CO2e
+No amount found for VF Corporation
+Visa: 14000.0 tonnes of CO2e
+Vistra Corp: 94624000.0 tonnes of CO2e
+Voya Financial Inc: 1200.0 tonnes of CO2e
+W. R. Berkley Corporation: 1100.0 tonnes of CO2e
+W.W. Grainger: 103000.0 tonnes of CO2e
+Walgreens Boots Alliance: 1728000.0 tonnes of CO2e
+Walmart: 16427000.0 tonnes of CO2e
+Waste Management: 16319000.0 tonnes of CO2e
+WEC Energy Group: 20241000.0 tonnes of CO2e
+No amount found for Wells Fargo & Company
+WESCO: 85000.0 tonnes of CO2e
+No amount found for Western Digital
+Westlake Chemical Corporation: 9616000.0 tonnes of CO2e
+WestRock: 9206000.0 tonnes of CO2e
+Weyerhaeuser Company: 1020000.0 tonnes of CO2e
+No amount found for Whirlpool Corporation
+Williams Companies: 11920000.0 tonnes of CO2e
+World Fuel Services: 46000.0 tonnes of CO2e
+Wynn Resorts: 413000.0 tonnes of CO2e
+Xcel Energy: 39299000.0 tonnes of CO2e
+Xerox: 149000.0 tonnes of CO2e
+XPO Logistics: 1230000.0 tonnes of CO2e
+Yum Brands: 170000.0 tonnes of CO2e
+Yum China: 2009000.0 tonnes of CO2e
+Zimmer Biomet Holdings: 176000.0 tonnes of CO2e
+message.txt
+17 KB
