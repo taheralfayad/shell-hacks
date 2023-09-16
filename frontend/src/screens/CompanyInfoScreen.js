@@ -80,7 +80,7 @@ const CompanyStockInfo = () => {
             ],
             datasets: [
                 {
-                    label: 'ESG Score',
+                    label: 'Sustainability Score',
                     data: [
                         companyChartData.carbonEmissions,
                         companyChartData.renewableEnergyUsage,
@@ -94,7 +94,7 @@ const CompanyStockInfo = () => {
                     borderWidth: 1,
                 },
                 {
-                    label: 'Average ESG Score',
+                    label: 'Average Sustainability Score',
                     data: [
                         companyChartData2.carbonEmissions,
                         companyChartData2.renewableEnergyUsage,
