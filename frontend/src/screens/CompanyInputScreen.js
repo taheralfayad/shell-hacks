@@ -1,17 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import Typography from '@mui/material/Typography';
-import Autocomplete from '@mui/material/Autocomplete';
-import TextField from '@mui/material/TextField';
-import Button from '@mui/material/Button';
-import { Link } from 'react-router-dom'
 import './CompanyInputScreen.css';
 import InputCompany from '../components/InputCompany';
 import Navbar from '../components/Navbar';
+import { useAuth0 } from "@auth0/auth0-react";
 
 const CompanyInputScreen = () => {
-
     return (
         <div id="company-input-screen">
             <Navbar/>

@@ -4,15 +4,11 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import { useAuth0 } from "@auth0/auth0-react";
 
 const LoginScreen = () => {
   const [username, setUsername] = useState(null);
   const [password, setPassword] = useState(null);
-
-  const handleLogin = () => {
-    // Typically, you'd send the username and password to your server here
-    alert(`Attempting to login with username: ${username}`);
-  };
 
   return (
     <div style={{ display: 'flex', height: '100vh', justifyContent: 'center', alignItems: 'center' }}>
@@ -43,7 +39,6 @@ const LoginScreen = () => {
             color="primary"
             variant="contained"
             style={{ marginTop: '16px' }}
-            onClick={handleLogin}
           >
             Login
           </Button>
