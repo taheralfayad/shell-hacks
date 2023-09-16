@@ -86,7 +86,8 @@ router.get('/:stockSymbol/score', async (req, res) => {
             100,
             company.carbonEmissions,
             minMaxCompanyData.minCarbonEmissions,
-            minMaxCompanyData.maxCarbonEmissions
+            minMaxCompanyData.maxCarbonEmissions,
+            true
         );
         chartData.renewableEnergyUsage = calculateScore(
             0,
@@ -100,7 +101,8 @@ router.get('/:stockSymbol/score', async (req, res) => {
             100,
             company.wasteGenerated,
             minMaxCompanyData.minWasteGenerated,
-            minMaxCompanyData.maxWasteGenerated
+            minMaxCompanyData.maxWasteGenerated,
+            true
         );
         chartData.minorityDiversity = calculateScore(
             0,
@@ -121,7 +123,8 @@ router.get('/:stockSymbol/score', async (req, res) => {
             100,
             company.employeeTurnover,
             minMaxCompanyData.minEmployeeTurnover,
-            minMaxCompanyData.maxEmployeeTurnover
+            minMaxCompanyData.maxEmployeeTurnover,
+            true
         );
 
         res.json(chartData);
