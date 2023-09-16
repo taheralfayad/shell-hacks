@@ -24,9 +24,9 @@ router.get("/", async (req, res) => {
 });
 
 // Get a specific company by ID
-router.get("/:id", async (req, res) => {
+router.get("/:stockSymbol", async (req, res) => {
   try {
-    const company = await Company.findById(req.params.id);
+    const company = await Company.findOne({ stockSymbol: req.params.stockSymbol });
     if (!company) {
       return res.status(404).json({ error: "Company not found" });
     }
