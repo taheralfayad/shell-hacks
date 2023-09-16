@@ -81,15 +81,13 @@ router.get('/:stockSymbol/score', async (req, res) => {
             });
 
         const chartData = {};
-        chartData.carbonEmissions =
-            100 -
-            calculateScore(
-                0,
-                100,
-                company.carbonEmissions,
-                minMaxCompanyData.minCarbonEmissions,
-                minMaxCompanyData.maxCarbonEmissions
-            );
+        chartData.carbonEmissions = calculateScore(
+            0,
+            100,
+            company.carbonEmissions,
+            minMaxCompanyData.minCarbonEmissions,
+            minMaxCompanyData.maxCarbonEmissions
+        );
         chartData.renewableEnergyUsage = calculateScore(
             0,
             100,
@@ -97,15 +95,13 @@ router.get('/:stockSymbol/score', async (req, res) => {
             minMaxCompanyData.minRenewableEnergyUsage,
             minMaxCompanyData.maxRenewableEnergyUsage
         );
-        chartData.wasteGenerated =
-            100 -
-            calculateScore(
-                0,
-                100,
-                company.wasteGenerated,
-                minMaxCompanyData.minWasteGenerated,
-                minMaxCompanyData.maxWasteGenerated
-            );
+        chartData.wasteGenerated = calculateScore(
+            0,
+            100,
+            company.wasteGenerated,
+            minMaxCompanyData.minWasteGenerated,
+            minMaxCompanyData.maxWasteGenerated
+        );
         chartData.minorityDiversity = calculateScore(
             0,
             100,
@@ -120,15 +116,13 @@ router.get('/:stockSymbol/score', async (req, res) => {
             minMaxCompanyData.minNonProfitContributions,
             minMaxCompanyData.maxNonProfitContributions
         );
-        chartData.employeeTurnover =
-            100 -
-            calculateScore(
-                0,
-                100,
-                company.employeeTurnover,
-                minMaxCompanyData.minEmployeeTurnover,
-                minMaxCompanyData.maxEmployeeTurnover
-            );
+        chartData.employeeTurnover = calculateScore(
+            0,
+            100,
+            company.employeeTurnover,
+            minMaxCompanyData.minEmployeeTurnover,
+            minMaxCompanyData.maxEmployeeTurnover
+        );
 
         res.json(chartData);
     } catch (error) {
