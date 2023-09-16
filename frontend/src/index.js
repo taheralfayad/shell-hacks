@@ -2,6 +2,7 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CompanyInputScreen from "./screens/CompanyInputScreen";
 import CompanyInfoScreen from "./screens/CompanyInfoScreen";
+import LoginScreen from "./screens/LoginScreen"
 import './index.css'
 
 export default function App() {
@@ -14,6 +15,7 @@ export default function App() {
           <Route path="blogs" element={<Blogs />} />
           <Route path="contact" element={<Contact />} />
           <Route path="*" element={<NoPage />} /> */}
+        <Route path="/login" element={<LoginScreen />}/>
       </Routes>
     </BrowserRouter>
   );
