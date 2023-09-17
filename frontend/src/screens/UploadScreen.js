@@ -16,6 +16,7 @@ function CompanyForm() {
     employeeTurnover: '',
     
   });
+  const [message, setMessage] = useState(null);
 
   const handleChange = (event) => {
     setFormData({
@@ -36,11 +37,13 @@ function CompanyForm() {
     .then(response => response.json())
     .then(data => {
       console.log('Success:', data);
-    })
-    .catch((error) => {
-      console.error('Error:', error);
-    });
-    console.log('Submitted data:', formData);
+      setMessage({ type: 'success', text: 'Data uploaded successfully!' });
+     })
+      .catch((error) => {
+        console.error('Error:', error);
+        setMessage({ type: 'error', text: 'There was an error uploading the data.' });
+     });
+      console.log('Submitted data:', formData);
   };
 
   return (
@@ -48,6 +51,13 @@ function CompanyForm() {
       <Typography component="h1" variant="h5">
         Company Form
       </Typography>
+      {
+      message && (
+        <Typography color={message.type === 'success' ? 'primary' : 'error'}>
+            {message.text}
+        </Typography>
+        )
+      }
       <form onSubmit={handleSubmit}>
     <TextField
       variant="outlined"

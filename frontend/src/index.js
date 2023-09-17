@@ -5,12 +5,13 @@ import CompanyInputScreen from "./screens/CompanyInputScreen";
 import CompanyInfoScreen from "./screens/CompanyInfoScreen";
 import LoginScreen from "./screens/LoginScreen"
 import UploadScreen from "./screens/UploadScreen"
+import TableScreen from './screens/TableScreen'
 import { createTheme, ThemeProvider } from '@mui/material';
 import './index.css'
 
 const theme = createTheme({
   typography: {
-    fontFamily: 'Lato, sans-serif', // Replace with your desired font
+    fontFamily: 'Lato, sans-serif',
   }
 });
 
@@ -27,6 +28,7 @@ export default function App() {
           <Route path="*" element={<NoPage />} /> */}
         <Route path="/signin" element={<LoginScreen />}/>
         <Route path="/upload" element={<UploadScreen />}/>
+        <Route path="/table"  element={<TableScreen />}/>
       </Routes>
     </BrowserRouter>
     </ThemeProvider>
