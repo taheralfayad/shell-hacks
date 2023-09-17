@@ -6,6 +6,9 @@ import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
 import Skeleton from '@mui/material/Skeleton';
 import LinearProgress from '@mui/material/LinearProgress';
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
 import { useParams, Link } from 'react-router-dom';
 import { Button } from '@mui/material';
 import {
@@ -134,11 +137,19 @@ const CompanyStockInfo = () => {
         return ((chartDataObj[3] + chartDataObj[4] + chartDataObj[5]) / 3).toFixed(2);
     }, [chartData])
 
+    const getTotalScore = useMemo(() => {
+        if (!chartData) return '';
+        console.log(chartData)
+        const chartDataObj = chartData.datasets[0].data;
+        const sum = chartDataObj.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+        return (sum / 6).toFixed(2);
+    }, [chartData])
+
     const getGradColor = (value) => {
         if (value < 20) {
             return "red";
         } else if (value < 35) {
-            return "orange";
+            return "#c2410c";
         } else if (value < 60) {
             return "#eab308";
         } else if (value < 85) {
@@ -160,12 +171,20 @@ const CompanyStockInfo = () => {
     return (
         <div>
         <Navbar />
-            <Typography variant="h8" component="div"  class="text-5xl mt-2 p-2" gutterBottom>
+        <div class="flex justify-between items-center mr-6">
+            <Typography variant="h8" component="div"  class="text-5xl mt-2 p-2 ml-8" gutterBottom>
                     {loading ? 'Loading' : companyData.name}
-                    <Typography variant="h8"  component="div" class="text-2xl ml-1" gutterBottom>
+                    <Typography variant="h8"  component="div" class="text-2xl" gutterBottom>
                         {loading ? '' : "(" + companyData.stockSymbol + ")"}
                     </Typography>
             </Typography>
+
+            <div class="flex">
+                <Typography style={{ color: 'black'}} variant='h4' class="text-4xl mr-4">Sustainability Score: </Typography>
+                <Typography variant='h4' style={{ color: getGradColor(getTotalScore) }} class="text-4xl">{getTotalScore}</Typography>
+            </div>
+
+        </div>
         <Divider class="mt-5" variant="middle" />
         <Card variant="outlined" class="flex justify-start w-full p-6">
             <CardContent>
@@ -178,23 +197,23 @@ const CompanyStockInfo = () => {
                                 sx={{ marginTop: 2 }}>
                                 Sustainability Metrics:
                             </Typography>
-                            <div class="p-2 border-bottom rounded">
+                            <div class="p-2 border-b-2">
                                 <div class="font-black">Carbon Emissions:</div> <i>{companyData.carbonEmissions} kt CO2</i>
                             </div>
-                            <div class="p-2">
+                            <div class="p-2 border-b-2">
                                 <div class="font-black">Renewable Energy Usage: </div><i> {companyData.renewableEnergyUsage}%</i>
                             </div>
-                            <div class="p-2">
+                            <div class="p-2 border-b-2">
                                 <div class="font-black">Waste Generated: </div><i> {companyData.wasteGenerated} kt</i>
                             </div>
-                            <div class="p-2">
+                            <div class="p-2 border-b-2">
                                 <div class="font-black">Minority Diversity Percentage: </div><i> {companyData.minorityDiversity}%</i>
                             </div>
-                            <div class="p-2">
+                            <div class="p-2 border-b-2">
                                 <div class="font-black">Non-Profit Donations: </div><i> {companyData.nonProfitContributions} million</i>
                             </div>
-                            <div class="p-2">
-                                <div class="font-black borde">Employee Turnover: </div><i> {companyData.employeeTurnover}%</i>
+                            <div class="p-2 border-b-2">
+                                <div class="font-black ">Employee Turnover: </div><i> {companyData.employeeTurnover}%</i>
                             </div>
                         <Divider orientation="vertical" flexItem />
                     </div>
@@ -256,7 +275,6 @@ const CompanyStockInfo = () => {
                 </div>
             </div>
             
-
         </Card>
         </div>
     );
