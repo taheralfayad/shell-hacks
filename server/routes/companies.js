@@ -1,8 +1,13 @@
+import 'dotenv/config';
+import fetch from 'node-fetch';
 import express from 'express';
 import Company from '../models/company.js';
 import calculateScore from '../utils/calculateScore.js';
 
 const router = express.Router();
+
+const url = 'https://api.api-ninjas.com/v1/logo?ticker=';
+const API_KEY = process.env.LOGO_API
 
 router.post('/', async (req, res) => {
     try {
@@ -258,6 +263,27 @@ router.get('/:stockSymbol/score', async (req, res) => {
 
         res.json(chartData);
     } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
+// Grab company logo through external API by stock ticker
+router.get('/:stockSymbol/logo', async (req, res) => {
+    try {
+        const response = await fetch(url + req.params.stockSymbol, {
+          method: 'GET',
+          headers: {
+            'X-Api-Key': `${API_KEY}`,
+          },
+        });
+    
+        if (!response.ok) {
+          res.status(500).json({ error: error.message });
+        }
+    
+        const data = await response.json();
+        res.json(data);
+    } catch {
         res.status(500).json({ error: error.message });
     }
 });

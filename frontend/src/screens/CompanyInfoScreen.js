@@ -56,6 +56,7 @@ const CompanyStockInfo = () => {
     const params = useParams();
     const [companyData, setCompanyData] = useState(null);
     const [chartData, setChartData] = useState(null);
+    const [logo, setLogo] = useState(null);
     const [loading, setLoading] = useState(true);
 
     const fetchData = () => {
@@ -75,7 +76,25 @@ const CompanyStockInfo = () => {
                 console.error('Error fetching company data:', error);
                 setCompanyData(null);
             });
+
+        const sym = (params.stockSymbol == 'GOOGL') ? 'GOOG' : params.stockSymbol
+        fetch(`/companies/${sym}/logo`)
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok when grabbing logo');
+                }
+                return response.json();
+            })
+            .then((data) => {
+                setLogo(data[0].image);
+                console.log(data[0].image)
+            })
+            .catch((error) => {
+                console.error('Error when fetching logo');
+                setLogo(null);
+            })
     };
+
 
     const getChartData = async () => {
         let response = await fetch(`/companies/${params.stockSymbol}/score`);
@@ -88,10 +107,10 @@ const CompanyStockInfo = () => {
             labels: [
                 'Carbon Emissions',
                 'Renewable Energy Usage',
-                'Waste Generated',
                 'Minority Diversity',
                 'Non-Profit Donations',
                 'Employee Turnover',
+                'Waste Generated',
             ],
             datasets: [
                 {
@@ -99,10 +118,10 @@ const CompanyStockInfo = () => {
                     data: [
                         companyChartData.carbonEmissions,
                         companyChartData.renewableEnergyUsage,
-                        companyChartData.wasteGenerated,
                         companyChartData.minorityDiversity,
                         companyChartData.nonProfitContributions,
                         companyChartData.employeeTurnover,
+                        companyChartData.wasteGenerated,
                     ],
                     backgroundColor: 'rgba(255, 99, 132, 0.4)',
                     borderColor: 'rgba(255, 99, 132, 1)',
@@ -131,14 +150,14 @@ const CompanyStockInfo = () => {
     const getEnvironmentalScore = useMemo(() => {
         if (!chartData) return '';
         const chartDataObj = chartData.datasets[0].data;
-        return ((chartDataObj[0] + chartDataObj[1] + chartDataObj[2]) / 3).toFixed(2);
+        return ((chartDataObj[0] + chartDataObj[1] + chartDataObj[5]) / 3).toFixed(2);
     }, [chartData])
 
     const getSocialScore = useMemo(() => {
         if (!chartData) return '';
         console.log(chartData)
         const chartDataObj = chartData.datasets[0].data;
-        return ((chartDataObj[3] + chartDataObj[4] + chartDataObj[5]) / 3).toFixed(2);
+        return ((chartDataObj[3] + chartDataObj[4] + chartDataObj[2]) / 3).toFixed(2);
     }, [chartData])
 
     const getTotalScore = useMemo(() => {
@@ -176,12 +195,17 @@ const CompanyStockInfo = () => {
         <div>
         <Navbar />
         <div class="flex justify-between items-center mr-6">
-            <Typography variant="h8" component="div"  class="text-5xl mt-2 p-2 ml-8" gutterBottom>
-                    {loading ? 'Loading' : companyData.name}
-                    <Typography variant="h8"  component="div" class="text-2xl" gutterBottom>
-                        {loading ? '' : "(" + companyData.stockSymbol + ")"}
-                    </Typography>
-            </Typography>
+            <div class="flex gap-4 items-center mt-2 p-2 ml-8">
+                {logo ? <span style={{ backgroundImage: `url('${logo}')` }} class="w-16 h-16 rounded bg-contain bg-center bg-no-repeat" ></span> : <CircularProgress className='mr-6'/>}
+                
+                {/* <span style={{ backgroundImage: `url('https://api-ninjas-data.s3.us-west-2.amazonaws.com/logos/l476432a3e85a0aa21c23f5abd2975a89b6820d63.png')` }} class="w-16 h-16 rounded bg-contain bg-center bg-no-repeat" ></span> */}
+                <Typography variant="h8" component="div"  class="text-5xl" gutterBottom>
+                        {loading ? 'Loading' : companyData.name}
+                        <Typography variant="h8"  component="div" class="text-2xl" gutterBottom>
+                            {loading ? '' : "(" + companyData.stockSymbol + ")"}
+                        </Typography>
+                </Typography>
+            </div>
 
             <div class="flex mt-8 items-end">
                 <Typography style={{ color: 'black'}} variant='h4' class="text-4xl mr-4">Sustainability Score: </Typography>
@@ -281,10 +305,10 @@ const CompanyStockInfo = () => {
                     </AccordionSummary>
                     <AccordionDetails>
                         <h2 class="mb-4">- Enviromental sustainability score is determined by finding the average of the subcategory scores. Each subcategory is scored by their sustainability output compared to other S&P500 companies. </h2>
-                        <div>
-                            <h1>Carbon Emission: {chartData.carbonEmissions}</h1>
-                            <h1>Renewable Energy Usage: {chartData.renewableEnergyUsage}</h1>
-                            <h1>Waste Generated: {chartData.wasteGenerated}</h1>
+                        <div class="flex justify-evenly">
+                            <h1>Carbon Emission: <b class="ml-1" style={{ color: getGradColor(chartData.datasets[0].data[0]) }}>{(chartData.datasets[0].data[0]).toFixed(2)}</b></h1>
+                            <h1>Renewable Energy Usage: <b class="ml-1" style={{ color: getGradColor(chartData.datasets[0].data[1]) }}>{(chartData.datasets[0].data[1]).toFixed(2)}</b></h1>
+                            <h1>Waste Generated: <b class="ml-1" style={{ color: getGradColor(chartData.datasets[0].data[5]) }}>{(chartData.datasets[0].data[5]).toFixed(2)}</b></h1>
                         </div>
                     </AccordionDetails>
                 </Accordion>
@@ -304,9 +328,11 @@ const CompanyStockInfo = () => {
                     <Typography>How it's calculated</Typography>
                     </AccordionSummary>
                     <AccordionDetails>
-                        <h2>- Enviromental sustainability score is determined by finding the average of the subcategory scores. Each subcategory is scored by their sustainability output compared to other S&P500 companies. </h2>
-                        <div>
-                            <h1>Carbon Emission:</h1>
+                        <h2 class="mb-4">- Social sustainability score is determined by finding the average of the subcategory scores. Each subcategory is scored by their sustainability output compared to other S&P500 companies. </h2>
+                        <div class="flex justify-evenly items-center">
+                            <h1>Diversity:  <b class="ml-1" style={{ color: getGradColor(chartData.datasets[0].data[2]) }}>{(chartData.datasets[0].data[2]).toFixed(2)}</b></h1>
+                            <h1>Non-Profit Donations:  <b class="ml-1" style={{ color: getGradColor(chartData.datasets[0].data[3]) }}>{(chartData.datasets[0].data[3]).toFixed(2)}</b></h1>
+                            <h1>Employee Turnover:  <b class="ml-1" style={{ color: getGradColor(chartData.datasets[0].data[4]) }}>{(chartData.datasets[0].data[4]).toFixed(2)}</b></h1>
                         </div>
                     </AccordionDetails>
                 </Accordion>

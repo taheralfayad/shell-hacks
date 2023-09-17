@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom'
 import { useAuth0 } from "@auth0/auth0-react";
 // import TableTab from './TableTab';
 import UploadTab from './UploadTab';
+import { BsFillPersonFill } from 'react-icons/bs'
 import './Navbar.css';
 import { Table } from '@mui/material';
 import  TableTab from './TableTab';
