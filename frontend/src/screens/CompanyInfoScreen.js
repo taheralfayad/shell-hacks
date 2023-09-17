@@ -22,7 +22,8 @@ import {
     Legend,
 } from 'chart.js';
 import { PiPlant } from 'react-icons/pi';
-import { BsPeople } from 'react-icons/bs'
+import { BsPeople } from 'react-icons/bs';
+import { MdExpandMore } from 'react-icons/md';
 import { Radar } from 'react-chartjs-2';
 import { green } from '@mui/material/colors';
 
@@ -182,7 +183,7 @@ const CompanyStockInfo = () => {
                     </Typography>
             </Typography>
 
-            <div class="flex mt-8">
+            <div class="flex mt-8 items-end">
                 <Typography style={{ color: 'black'}} variant='h4' class="text-4xl mr-4">Sustainability Score: </Typography>
                 <Typography variant='h4' style={{ color: getGradColor(getTotalScore) }} class="text-4xl">{getTotalScore}</Typography>
             </div>
@@ -269,6 +270,24 @@ const CompanyStockInfo = () => {
                      <Typography variant='h4' style={{ color: getGradColor(getEnvironmentalScore) }}>{getEnvironmentalScore}</Typography>
                  </div> 
                  <LinearProgress variant="determinate" color='inherit' value={getEnvironmentalScore}></LinearProgress>
+
+                <Accordion class="border text-black rounded shadow-md">
+                    <AccordionSummary
+                    expandIcon={<MdExpandMore />}
+                    aria-controls="panel1a-content"
+                    id="panel1a-header"
+                    >
+                    <Typography>How it's calculated</Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                        <h2 class="mb-4">- Enviromental sustainability score is determined by finding the average of the subcategory scores. Each subcategory is scored by their sustainability output compared to other S&P500 companies. </h2>
+                        <div>
+                            <h1>Carbon Emission: {chartData.carbonEmissions}</h1>
+                            <h1>Renewable Energy Usage: {chartData.renewableEnergyUsage}</h1>
+                            <h1>Waste Generated: {chartData.wasteGenerated}</h1>
+                        </div>
+                    </AccordionDetails>
+                </Accordion>
             </div>
             <div class="p-6" style={{ color: getGradColor(getSocialScore) }}>
                  <div class="flex justify-between mb-4">
@@ -276,17 +295,30 @@ const CompanyStockInfo = () => {
                      <Typography variant='h4' style={{ color: getGradColor(getSocialScore) }}>{getSocialScore}</Typography>
                  </div> 
                  <span><LinearProgress variant="determinate" color='inherit' value={getSocialScore}></LinearProgress></span>
+                 <Accordion class="border text-black rounded shadow-md">
+                    <AccordionSummary
+                    expandIcon={<MdExpandMore />}
+                    aria-controls="panel1a-content"
+                    id="panel1a-header"
+                    >
+                    <Typography>How it's calculated</Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                        <h2>- Enviromental sustainability score is determined by finding the average of the subcategory scores. Each subcategory is scored by their sustainability output compared to other S&P500 companies. </h2>
+                        <div>
+                            <h1>Carbon Emission:</h1>
+                        </div>
+                    </AccordionDetails>
+                </Accordion>
              </div>
             </div>
             ) : (<div class="flex justify-center items-center">
                 <CircularProgress />
-
-            </div>
-        )} 
-        </div> 
-            
+                </div>
+                )} 
+            </div>             
         </Card>
-        </div>
+    </div>
     );
 };
 
