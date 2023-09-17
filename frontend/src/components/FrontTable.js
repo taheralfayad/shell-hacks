@@ -94,7 +94,6 @@ function CompanyTable() {
 
     return (
         <div>
-        <Navbar/>
         <TableHero/>
         {loading ? 
         <Box className="w-full flex flex-col gap-4">
