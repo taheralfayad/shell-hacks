@@ -230,8 +230,8 @@ const CompanyStockInfo = () => {
             </CardContent>
             <div class="w-full flex flex-col justify-center">
             {chartData ? (    
-                <div style={{ width: 600, height: 600 }} class="text-red">
-                    <Radar style={{ alignSelf: 'center' }} data={chartData} options={options} />
+                <div style={{ width: 600, height: 600, alignSelf: 'center' }} class="text-red">
+                    <Radar data={chartData} options={options} />
                 </div>
             ) : null}
                 <div class="flex flex-col gap-4">
