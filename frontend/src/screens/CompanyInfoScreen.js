@@ -146,16 +146,16 @@ const CompanyStockInfo = () => {
                                 Sustainability Metrics:
                             </Typography>
                             <div class="p-2 border rounded">
-                                <div class="font-black borde">Carbon Emissions:</div> {companyData.carbonEmissions} <i>kt CO2</i>
+                                <div class="font-black borde">Carbon Emissions:</div> <i>{companyData.carbonEmissions} kt CO2</i>
                             </div>
                             <div class="p-2 border rounded">
-                                <div class="font-black borde">Renewable Energy Usage: </div> {companyData.renewableEnergyUsage}<i>%</i>
+                                <div class="font-black borde">Renewable Energy Usage: </div><i> {companyData.renewableEnergyUsage}%</i>
                             </div>
                             <div class="p-2 border rounded">
-                                <div class="font-black borde">Waste Generated: </div> {companyData.wasteGenerated}<i> kt</i>
+                                <div class="font-black borde">Waste Generated: </div><i> {companyData.wasteGenerated} kt</i>
                             </div>
                             <div class="p-2 border rounded">
-                                <div class="font-black borde">Minority Diversity Percentage: </div> {companyData.minorityDiversity}<i>%</i>
+                                <div class="font-black borde">Minority Diversity Percentage: </div><i> {companyData.minorityDiversity}%</i>
                             </div>
                             <div class="p-2 border rounded">
                                 <div class="font-black borde">Non-Profit Donations: </div><i> {companyData.nonProfitContributions} million</i>
@@ -200,9 +200,9 @@ const CompanyStockInfo = () => {
                 </div>
             </CardContent>
 
-            <div class="w-full flex border justify-center">
+            <div class="w-full flex justify-center">
             {chartData ? (
-                <div class="w-96 h-96 border">
+                <div class="w-96 h-96">
                     <Radar data={chartData} options={options} />
                 </div>
 
