@@ -7,8 +7,6 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom'
 
-
-
 export default function InputCompany() {
     const [companies, setCompanies] = useState([]);
     const [selectedCompany, setSelectedCompany] = useState(null);
@@ -18,6 +16,7 @@ export default function InputCompany() {
         fetch('/companies')
             .then((response) => response.json())
             .then((data) => {
+                data.sort((a, b) => a.name.localeCompare(b.name));
                 setCompanies(data);
                 setLoading(false);
             })

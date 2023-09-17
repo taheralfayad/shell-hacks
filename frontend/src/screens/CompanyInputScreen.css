@@ -1,6 +1,6 @@
 #company-input-screen {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;  /* Changed to column so that the navbar and content stack vertically */
     align-items: center;

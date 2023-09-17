@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom'
 import { useAuth0 } from "@auth0/auth0-react";
-import TableTab from './TableTab';
+// import TableTab from './TableTab';
 import UploadTab from './UploadTab';
 import './Navbar.css';
 
@@ -22,7 +22,7 @@ console.log(error)
           <a class="title" href="/">Sustain.io</a>
         </Typography>
         
-        <TableTab/>
+        {/* <TableTab/> */}
       <UploadTab/>
       {!isAuthenticated ? (<Button 
             color="inherit"
