@@ -6,7 +6,10 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import Box from '@mui/material/Box';
+import Skeleton from '@mui/material/Skeleton';
 import Pagination from '@mui/material/Pagination';
+import LinearProgress from '@mui/material/LinearProgress';
 import Navbar from './Navbar';
 import TableHero from './TableHero';
 import { Link } from 'react-router-dom'
@@ -89,12 +92,21 @@ function CompanyTable() {
         return ((environmentalScore + socialScore) / 2).toFixed(2)
     }
 
-    if (loading) return <div>Loading...</div>;  // Show a loading message until data is fetched
-
     return (
         <div>
         <Navbar/>
         <TableHero/>
+        {loading ? 
+        <Box className="w-full flex flex-col gap-4">
+            <LinearProgress />
+            <Skeleton />
+            <Skeleton />
+            <Skeleton />
+            <Skeleton />
+            <Skeleton animation="wave" />
+            <Skeleton animation={false} />
+        </Box> 
+        : <div>
         <TableContainer component={Paper}>
             <Table aria-label="Company Table">
                 <TableHead>
@@ -111,7 +123,7 @@ function CompanyTable() {
                     {currentItems.map((row, index) => (
                         <TableRow key={row.stockTicker}>
                             <TableCell style={{textAlign: 'center', fontWeight: 'bolder', fontSize: '20px'}}>{(currentPage - 1) * itemsPerPage + index + 1}</TableCell>
-                            <TableCell style={{fontWeight: 'bolder', fontSize: '20px'}}><Link href = {`/${row.stockSymbol}`} >{row.name}</Link></TableCell>
+                            <TableCell style={{fontWeight: 'bolder', fontSize: '20px'}}><Link to = {`/${row.stockSymbol}`} >{row.name}</Link></TableCell>
                             <TableCell style={{fontWeight: 'bolder', fontSize: '20px'}}>{row.stockSymbol}</TableCell>
                             <TableCell style={{fontWeight: 'bolder', fontSize: '20px'}}>{mappings[row.stockSymbol] ? mappings[row.stockSymbol][0] : 'Loading...'}</TableCell>
                             <TableCell style={{fontWeight: 'bolder', fontSize: '20px'}}>{mappings[row.stockSymbol] ? mappings[row.stockSymbol][1] : 'Loading...'}</TableCell>
@@ -129,7 +141,7 @@ function CompanyTable() {
             variant="outlined" 
             shape="rounded"
             style={{ marginTop: '20px', display: 'flex', justifyContent: 'center' }}
-        />
+        /></div>}   
 
         </div>
     );
