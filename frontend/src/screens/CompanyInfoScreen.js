@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import Navbar from '../components/Navbar';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -115,6 +115,19 @@ const CompanyStockInfo = () => {
         setChartData(data);
     };
 
+    const getEnvironmentalScore = useMemo(() => {
+        if (!chartData) return '';
+        const chartDataObj = chartData.datasets[0].data;
+        return ((chartDataObj[0] + chartDataObj[1] + chartDataObj[2]) / 3).toFixed(2);
+    }, [chartData])
+
+    const getSocialScore = useMemo(() => {
+        if (!chartData) return '';
+        console.log(chartData)
+        const chartDataObj = chartData.datasets[0].data;
+        return ((chartDataObj[3] + chartDataObj[4] + chartDataObj[5]) / 3).toFixed(2);
+    }, [chartData])
+
     useEffect(() => {
         fetchData();
     }, []);
@@ -200,14 +213,15 @@ const CompanyStockInfo = () => {
                 </div>
             </CardContent>
 
-            <div class="w-full flex justify-center">
             {chartData ? (
-                <div class="w-96 h-96">
+                <div class="w-full flex flex-col border justify-center">
+                <div style={{ width: 600, height: 600 }}>
                     <Radar data={chartData} options={options} />
                 </div>
-
+                    <Typography variant='h4'>Environmental Score: <Typography style={{ color: 'green' }}>{getEnvironmentalScore}</Typography></Typography>
+                    <Typography variant='h4'>Social Score: <Typography style={{ color: 'darkgoldenrod' }}>{getSocialScore}</Typography></Typography>
+                </div>
             ) : null}
-            </div>
 
         </Card>
         </div>
