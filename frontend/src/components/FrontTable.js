@@ -6,15 +6,21 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import Pagination from '@mui/material/Pagination';
 import Navbar from './Navbar';
 import TableHero from './TableHero';
 import { Link } from 'react-router-dom'
+
 
 function CompanyTable() {
     const [companies, setCompanies] = useState([]);
     const [scores, setScores] = useState({});
     const [loading, setLoading] = useState(true);
     const [mappings, setMapping] = useState({});
+    const [currentPage, setCurrentPage] = useState(1);
+    const itemsPerPage = 10;
+    
+    const currentItems = companies.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
 
     useEffect(() => {
         fetch('/companies')
@@ -96,9 +102,9 @@ function CompanyTable() {
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                    {companies.map((row, index) => (
+                    {currentItems.map((row, index) => (
                         <TableRow key={row.stockTicker}>
-                            <TableCell style={{textAlign: 'center', fontWeight: 'bolder', fontSize: '20px'}}>{index + 1}</TableCell>
+                            <TableCell style={{textAlign: 'center', fontWeight: 'bolder', fontSize: '20px'}}>{(currentPage - 1) * itemsPerPage + index + 1}</TableCell>
                             <TableCell style={{fontWeight: 'bolder', fontSize: '20px'}}><Link href = {`/${row.stockSymbol}`} >{row.name}</Link></TableCell>
                             <TableCell style={{fontWeight: 'bolder', fontSize: '20px'}}>{row.stockSymbol}</TableCell>
                             <TableCell style={{fontWeight: 'bolder', fontSize: '20px'}}>{mappings[row.stockSymbol] ? mappings[row.stockSymbol][0] : 'Loading...'}</TableCell>
@@ -109,6 +115,16 @@ function CompanyTable() {
                 </TableBody>
             </Table>
         </TableContainer>
+
+        <Pagination 
+            count={Math.ceil(companies.length / itemsPerPage)} 
+            page={currentPage} 
+            onChange={(event, value) => setCurrentPage(value)} 
+            variant="outlined" 
+            shape="rounded"
+            style={{ marginTop: '20px', display: 'flex', justifyContent: 'center' }}
+        />
+
         </div>
     );
 }
