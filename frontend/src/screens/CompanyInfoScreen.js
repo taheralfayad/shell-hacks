@@ -6,6 +6,7 @@ import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
 import Skeleton from '@mui/material/Skeleton';
 import LinearProgress from '@mui/material/LinearProgress';
+import CircularProgress from '@mui/material/CircularProgress';
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
@@ -20,6 +21,8 @@ import {
     Tooltip,
     Legend,
 } from 'chart.js';
+import { PiPlant } from 'react-icons/pi';
+import { BsPeople } from 'react-icons/bs'
 import { Radar } from 'react-chartjs-2';
 import { green } from '@mui/material/colors';
 
@@ -179,13 +182,13 @@ const CompanyStockInfo = () => {
                     </Typography>
             </Typography>
 
-            <div class="flex">
+            <div class="flex mt-8">
                 <Typography style={{ color: 'black'}} variant='h4' class="text-4xl mr-4">Sustainability Score: </Typography>
                 <Typography variant='h4' style={{ color: getGradColor(getTotalScore) }} class="text-4xl">{getTotalScore}</Typography>
             </div>
 
         </div>
-        <Divider class="mt-5" variant="middle" />
+        <Divider class="mt-2" variant="middle" />
         <Card variant="outlined" class="flex justify-start w-full p-6">
             <CardContent>
                 {companyData ? (
@@ -218,7 +221,7 @@ const CompanyStockInfo = () => {
                         <Divider orientation="vertical" flexItem />
                     </div>
                 ) : (
-                    <div style={{ width: '15%' }}>
+                    <div style={{ width: 300 }}>
                         <Skeleton sx={{ fontSize: '1.25rem', marginTop: 2 }} />
                         <Skeleton
                             sx={{ fontSize: '1rem', marginBottom: '5.6px' }}
@@ -250,30 +253,37 @@ const CompanyStockInfo = () => {
                     Go Back
                 </Button>
                 </div>
-            </CardContent>
+            </CardContent>  
             <div class="w-full flex flex-col justify-center">
             {chartData ? (    
                 <div style={{ width: 600, height: 600, alignSelf: 'center' }} class="text-red">
                     <Radar data={chartData} options={options} />
                 </div>
             ) : null}
-                <div class="flex flex-col gap-4">
-                    <div class="p-6" style={{ color: getGradColor(getEnvironmentalScore) }}>
-                        <div class="flex justify-between mb-4 ">
-                            <Typography style={{ color: 'black'}} variant='h4'>Environmental Score:</Typography>
-                            <Typography variant='h4' style={{ color: getGradColor(getEnvironmentalScore) }}>{getEnvironmentalScore}</Typography>
-                        </div> 
-                        <LinearProgress variant="determinate" color='inherit' value={getEnvironmentalScore}></LinearProgress>
-                    </div>
-                    <div class="p-6" style={{ color: getGradColor(getSocialScore) }}>
-                        <div class="flex justify-between mb-4">
-                            <Typography style={{ color: 'black'}} variant='h4'>Social Score:</Typography>
-                            <Typography variant='h4' style={{ color: getGradColor(getSocialScore) }}>{getSocialScore}</Typography>
-                        </div> 
-                        <span><LinearProgress variant="determinate" color='inherit' value={getSocialScore}></LinearProgress></span>
-                    </div>
-                </div>
+            {chartData ? (
+             <div class="flex flex-col gap-4">
+             <div class="p-6" style={{ color: getGradColor(getEnvironmentalScore) }}>
+                 <div class="flex justify-between mb-4 ">
+                     
+                     <span class="flex gap-4 items-center text-4xl"><PiPlant /><Typography style={{ color: 'black'}} variant='h4'>Environmental Score:</Typography></span>
+                     <Typography variant='h4' style={{ color: getGradColor(getEnvironmentalScore) }}>{getEnvironmentalScore}</Typography>
+                 </div> 
+                 <LinearProgress variant="determinate" color='inherit' value={getEnvironmentalScore}></LinearProgress>
             </div>
+            <div class="p-6" style={{ color: getGradColor(getSocialScore) }}>
+                 <div class="flex justify-between mb-4">
+                     <span class="flex gap-4 items-center text-4xl"><BsPeople /><Typography style={{ color: 'black'}} variant='h4'>Social Score:</Typography></span>
+                     <Typography variant='h4' style={{ color: getGradColor(getSocialScore) }}>{getSocialScore}</Typography>
+                 </div> 
+                 <span><LinearProgress variant="determinate" color='inherit' value={getSocialScore}></LinearProgress></span>
+             </div>
+            </div>
+            ) : (<div class="flex justify-center items-center">
+                <CircularProgress />
+
+            </div>
+        )} 
+        </div> 
             
         </Card>
         </div>
