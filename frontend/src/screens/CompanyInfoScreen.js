@@ -34,11 +34,15 @@ const options = {
         r: {
             angleLines: {
                 display: false,
+                borderCapStyle	: 'round',
             },
             suggestedMin: 0,
             suggestedMax: 100,
+            borderColor: 'black',
+            borderCapStyle	: 'round',
         },
     },
+    //background color to purple
 };
 
 const CompanyStockInfo = () => {
@@ -93,7 +97,7 @@ const CompanyStockInfo = () => {
                         companyChartData.nonProfitContributions,
                         companyChartData.employeeTurnover,
                     ],
-                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    backgroundColor: 'rgba(255, 99, 132, 0.4)',
                     borderColor: 'rgba(255, 99, 132, 1)',
                     borderWidth: 1,
                 },
@@ -107,7 +111,7 @@ const CompanyStockInfo = () => {
                         companyChartData2.nonProfitContributions,
                         companyChartData2.employeeTurnover,
                     ],
-                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                    backgroundColor: 'rgba(54, 162, 235, 0.4)',
                     borderColor: 'rgba(54, 162, 235, 1)',
                     borderWidth: 1,
                 }
@@ -166,7 +170,7 @@ const CompanyStockInfo = () => {
         <Card variant="outlined" class="flex justify-start w-full p-6">
             <CardContent>
                 {companyData ? (
-                        <div class="flex flex-col gap-4 pr-6">
+                        <div class="flex flex-col gap-4 pr-6 border rounded p-2">
                             <Typography
                                 variant="h6"
                                 class="text-4xl mb-2"
@@ -174,22 +178,22 @@ const CompanyStockInfo = () => {
                                 sx={{ marginTop: 2 }}>
                                 Sustainability Metrics:
                             </Typography>
-                            <div class="p-2 border rounded">
-                                <div class="font-black borde">Carbon Emissions:</div> <i>{companyData.carbonEmissions} kt CO2</i>
+                            <div class="p-2 border-bottom rounded">
+                                <div class="font-black">Carbon Emissions:</div> <i>{companyData.carbonEmissions} kt CO2</i>
                             </div>
-                            <div class="p-2 border rounded">
-                                <div class="font-black borde">Renewable Energy Usage: </div><i> {companyData.renewableEnergyUsage}%</i>
+                            <div class="p-2">
+                                <div class="font-black">Renewable Energy Usage: </div><i> {companyData.renewableEnergyUsage}%</i>
                             </div>
-                            <div class="p-2 border rounded">
-                                <div class="font-black borde">Waste Generated: </div><i> {companyData.wasteGenerated} kt</i>
+                            <div class="p-2">
+                                <div class="font-black">Waste Generated: </div><i> {companyData.wasteGenerated} kt</i>
                             </div>
-                            <div class="p-2 border rounded">
-                                <div class="font-black borde">Minority Diversity Percentage: </div><i> {companyData.minorityDiversity}%</i>
+                            <div class="p-2">
+                                <div class="font-black">Minority Diversity Percentage: </div><i> {companyData.minorityDiversity}%</i>
                             </div>
-                            <div class="p-2 border rounded">
-                                <div class="font-black borde">Non-Profit Donations: </div><i> {companyData.nonProfitContributions} million</i>
+                            <div class="p-2">
+                                <div class="font-black">Non-Profit Donations: </div><i> {companyData.nonProfitContributions} million</i>
                             </div>
-                            <div class="p-2 border rounded">
+                            <div class="p-2">
                                 <div class="font-black borde">Employee Turnover: </div><i> {companyData.employeeTurnover}%</i>
                             </div>
                         <Divider orientation="vertical" flexItem />
@@ -235,14 +239,14 @@ const CompanyStockInfo = () => {
                 </div>
             ) : null}
                 <div class="flex flex-col gap-4">
-                    <div class="p-6 border rounded" style={{ color: getGradColor(getEnvironmentalScore) }}>
-                        <div class="flex justify-between mb-4">
+                    <div class="p-6" style={{ color: getGradColor(getEnvironmentalScore) }}>
+                        <div class="flex justify-between mb-4 ">
                             <Typography style={{ color: 'black'}} variant='h4'>Environmental Score:</Typography>
                             <Typography variant='h4' style={{ color: getGradColor(getEnvironmentalScore) }}>{getEnvironmentalScore}</Typography>
                         </div> 
                         <LinearProgress variant="determinate" color='inherit' value={getEnvironmentalScore}></LinearProgress>
                     </div>
-                    <div class="p-6 border rounded" style={{ color: getGradColor(getSocialScore) }}>
+                    <div class="p-6" style={{ color: getGradColor(getSocialScore) }}>
                         <div class="flex justify-between mb-4">
                             <Typography style={{ color: 'black'}} variant='h4'>Social Score:</Typography>
                             <Typography variant='h4' style={{ color: getGradColor(getSocialScore) }}>{getSocialScore}</Typography>

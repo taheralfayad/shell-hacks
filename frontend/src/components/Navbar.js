@@ -6,6 +6,7 @@ import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom'
 import { useAuth0 } from "@auth0/auth0-react";
 import UploadTab from './UploadTab';
+import './Navbar.css';
 
 export default function Navbar() {
 const { loginWithRedirect, logout, isAuthenticated, isLoading, error} = useAuth0();
@@ -14,7 +15,7 @@ const { loginWithRedirect, logout, isAuthenticated, isLoading, error} = useAuth0
 console.log(error)
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" id='navbar'>
       <Toolbar>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
           <a class="title" href="/">Sustain.io</a>
