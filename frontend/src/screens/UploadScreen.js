@@ -3,6 +3,8 @@ import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField'
 import Container from '@mui/material/Container'
 import Typography from '@mui/material/Typography'
+import { Link } from 'react-router-dom'
+import Navbar from '../components/Navbar';
 
 function CompanyForm() {
   const [formData, setFormData] = useState({
@@ -47,7 +49,9 @@ function CompanyForm() {
   };
 
   return (
-    <Container component="main" maxWidth="xs">
+    <div>
+    <Navbar/>
+    <Container component="main" maxWidth="xs" style={{marginTop: '2rem'}}>
       <Typography component="h1" variant="h5">
         Company Form
       </Typography>
@@ -150,11 +154,22 @@ function CompanyForm() {
           fullWidth
           variant="contained"
           color="primary"
+          style={{ marginTop: '1rem' }}
         >
           Submit
         </Button>
+        <Button
+            variant="contained"
+            fullWidth
+            color="primary"
+            style={{ marginTop: '1rem' , backgroundColor: 'red'}}
+            component={Link}
+            to={'/'}>
+            Go Back
+        </Button>
       </form>
     </Container>
+    </div>
   );
 }
 

@@ -15,3 +15,11 @@
     font-weight: 600;
     font-size: 17px;
 }
+#rank-title{
+  font-size: 80px;
+  font-weight: 1000;
+  background: -webkit-linear-gradient(#ec5fff, #42bee4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Lato', sans-serif;
+}

@@ -6,6 +6,9 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import Navbar from './Navbar';
+import TableHero from './TableHero';
+import { Link } from 'react-router-dom'
 
 function CompanyTable() {
     const [companies, setCompanies] = useState([]);
@@ -77,30 +80,36 @@ function CompanyTable() {
     if (loading) return <div>Loading...</div>;  // Show a loading message until data is fetched
 
     return (
+        <div>
+        <Navbar/>
+        <TableHero/>
         <TableContainer component={Paper}>
             <Table aria-label="Company Table">
                 <TableHead>
                     <TableRow>
-                        <TableCell>Company Name</TableCell>
-                        <TableCell>Stock Ticker</TableCell>
-                        <TableCell>Environmental Score</TableCell>
-                        <TableCell>Social Score</TableCell>
-                        <TableCell>Total Score</TableCell>
+                        <TableCell style={{fontSize: 'large', fontWeight: 'bold'}}>Sustainability Ranking</TableCell>
+                        <TableCell style={{fontSize: 'large', fontWeight: 'bold'}}>Company Name</TableCell>
+                        <TableCell style={{fontSize: 'large', fontWeight: 'bold'}}>Stock Ticker</TableCell>
+                        <TableCell style={{fontSize: 'large', fontWeight: 'bold'}}>Environmental Score</TableCell>
+                        <TableCell style={{fontSize: 'large', fontWeight: 'bold'}}>Social Score</TableCell>
+                        <TableCell style={{fontSize: 'large', fontWeight: 'bold'}}>Total Score</TableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                    {companies.map((row) => (
+                    {companies.map((row, index) => (
                         <TableRow key={row.stockTicker}>
-                            <TableCell>{row.name}</TableCell>
-                            <TableCell>{row.stockSymbol}</TableCell>
-                            <TableCell>{mappings[row.stockSymbol] ? mappings[row.stockSymbol][0] : 'Loading...'}</TableCell>
-                            <TableCell>{mappings[row.stockSymbol] ? mappings[row.stockSymbol][1] : 'Loading...'}</TableCell>
-                            <TableCell>{mappings[row.stockSymbol] ? mappings[row.stockSymbol][2] : 'Loading...'}</TableCell>
+                            <TableCell style={{textAlign: 'center', fontWeight: 'bolder', fontSize: '20px'}}>{index + 1}</TableCell>
+                            <TableCell style={{fontWeight: 'bolder', fontSize: '20px'}}><Link href = {`/${row.stockSymbol}`} >{row.name}</Link></TableCell>
+                            <TableCell style={{fontWeight: 'bolder', fontSize: '20px'}}>{row.stockSymbol}</TableCell>
+                            <TableCell style={{fontWeight: 'bolder', fontSize: '20px'}}>{mappings[row.stockSymbol] ? mappings[row.stockSymbol][0] : 'Loading...'}</TableCell>
+                            <TableCell style={{fontWeight: 'bolder', fontSize: '20px'}}>{mappings[row.stockSymbol] ? mappings[row.stockSymbol][1] : 'Loading...'}</TableCell>
+                            <TableCell style={{fontWeight: 'bolder', fontSize: '20px'}}>{mappings[row.stockSymbol] ? mappings[row.stockSymbol][2] : 'Loading...'}</TableCell>
                         </TableRow>
                     ))}
                 </TableBody>
             </Table>
         </TableContainer>
+        </div>
     );
 }
 
