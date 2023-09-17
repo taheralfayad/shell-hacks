@@ -26,20 +26,25 @@ function CompanyTable() {
         fetch('/companies')
             .then((response) => response.json())
             .then(async (fetchedCompanies) => {
-                setCompanies(fetchedCompanies);
-                
-                // For each fetched company, fetch its score and update the scores state
+                let newMappings = {};
+    
                 for (const company of fetchedCompanies) {
                     const scores = await fetchScore(company.stockSymbol);
                     let environmentalScore = getEnvironmentalScore(scores);
                     let socialScore = getSocialScore(scores);
                     let totalScore = getTotalScore(environmentalScore, socialScore);
-                    setMapping(prevMapping => ({
-                        ...prevMapping,
-                        [company.stockSymbol]: [environmentalScore, socialScore, totalScore]
-                    }));
+                    newMappings[company.stockSymbol] = [environmentalScore, socialScore, totalScore];
                 }
-
+    
+                // Sort companies based on the total score
+                fetchedCompanies.sort((a, b) => {
+                    const totalScoreA = newMappings[a.stockSymbol] ? newMappings[a.stockSymbol][2] : 0;
+                    const totalScoreB = newMappings[b.stockSymbol] ? newMappings[b.stockSymbol][2] : 0;
+                    return totalScoreB - totalScoreA;
+                });
+    
+                setMapping(newMappings);
+                setCompanies(fetchedCompanies);
                 setLoading(false);
             })
             .catch((error) => {
@@ -47,6 +52,7 @@ function CompanyTable() {
                 setLoading(false);
             });
     }, []);
+    
 
     useEffect(() => {
         console.log(mappings);

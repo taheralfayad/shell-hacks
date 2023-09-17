@@ -3,7 +3,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Auth0Provider } from '@auth0/auth0-react';
 import CompanyInputScreen from "./screens/CompanyInputScreen";
 import CompanyInfoScreen from "./screens/CompanyInfoScreen";
-import LoginScreen from "./screens/LoginScreen"
 import UploadScreen from "./screens/UploadScreen"
 import TableScreen from './screens/TableScreen'
 import { createTheme, ThemeProvider } from '@mui/material';
@@ -26,7 +25,6 @@ export default function App() {
           <Route path="blogs" element={<Blogs />} />
           <Route path="contact" element={<Contact />} />
           <Route path="*" element={<NoPage />} /> */}
-        <Route path="/signin" element={<LoginScreen />}/>
         <Route path="/upload" element={<UploadScreen />}/>
         <Route path="/table"  element={<TableScreen />}/>
       </Routes>
