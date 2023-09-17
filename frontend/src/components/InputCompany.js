@@ -33,7 +33,7 @@ export default function InputCompany() {
     };
 
     return(
-    <Card variant="outlined" sx={{ width: '50%'}}>
+    <Card variant="outlined" sx={{ width: '50%', minWidth: '300px'}}>
         <CardContent>
             <Typography variant="h5" component="div" gutterBottom>
                 Enter Company Name

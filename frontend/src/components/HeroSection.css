@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+
+
+#hero-title {
+    font-size: 100px;
+    background: -webkit-linear-gradient(#ec5fff, #42bee4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Lato', sans-serif;
+  }
+.hero-desc{
+    max-width: 650px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+}
