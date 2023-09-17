@@ -8,6 +8,8 @@ import { useAuth0 } from "@auth0/auth0-react";
 // import TableTab from './TableTab';
 import UploadTab from './UploadTab';
 import './Navbar.css';
+import { Table } from '@mui/material';
+import  TableTab from './TableTab';
 
 export default function Navbar() {
 const { loginWithRedirect, logout, isAuthenticated, isLoading, error} = useAuth0();
@@ -24,6 +26,7 @@ console.log(error)
         
         {/* <TableTab/> */}
       <UploadTab/>
+      <TableTab/>
       {!isAuthenticated ? (<Button 
             color="inherit"
             component={Link}
