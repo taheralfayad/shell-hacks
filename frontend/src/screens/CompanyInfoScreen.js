@@ -5,6 +5,7 @@ import CardContent from '@mui/material/CardContent';
 import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
 import Skeleton from '@mui/material/Skeleton';
+import LinearProgress from '@mui/material/LinearProgress';
 import { useParams, Link } from 'react-router-dom';
 import { Button } from '@mui/material';
 import {
@@ -17,6 +18,7 @@ import {
     Legend,
 } from 'chart.js';
 import { Radar } from 'react-chartjs-2';
+import { green } from '@mui/material/colors';
 
 ChartJS.register(
     RadialLinearScale,
@@ -128,6 +130,20 @@ const CompanyStockInfo = () => {
         return ((chartDataObj[3] + chartDataObj[4] + chartDataObj[5]) / 3).toFixed(2);
     }, [chartData])
 
+    const getGradColor = (value) => {
+        if (value < 20) {
+            return "red";
+        } else if (value < 35) {
+            return "orange";
+        } else if (value < 60) {
+            return "#eab308";
+        } else if (value < 85) {
+            return "#15803d"
+        } else {
+            return "#22c55e"
+        }
+    }
+
     useEffect(() => {
         fetchData();
     }, []);
@@ -150,7 +166,7 @@ const CompanyStockInfo = () => {
         <Card variant="outlined" class="flex justify-start w-full p-6">
             <CardContent>
                 {companyData ? (
-                        <div class="flex flex-col gap-2 pr-6">
+                        <div class="flex flex-col gap-4 pr-6">
                             <Typography
                                 variant="h6"
                                 class="text-4xl mb-2"
@@ -212,16 +228,30 @@ const CompanyStockInfo = () => {
                 </Button>
                 </div>
             </CardContent>
-
-            {chartData ? (
-                <div class="w-full flex flex-col border justify-center">
-                <div style={{ width: 600, height: 600 }}>
+            <div class="w-full flex flex-col justify-center">
+            {chartData ? (    
+                <div style={{ width: "40vw", height: "40vp" }}class="text-red">
                     <Radar data={chartData} options={options} />
                 </div>
-                    <Typography variant='h4'>Environmental Score: <Typography style={{ color: 'green' }}>{getEnvironmentalScore}</Typography></Typography>
-                    <Typography variant='h4'>Social Score: <Typography style={{ color: 'darkgoldenrod' }}>{getSocialScore}</Typography></Typography>
-                </div>
             ) : null}
+                <div class="flex flex-col gap-4">
+                    <div class="p-6 border rounded" style={{ color: getGradColor(getEnvironmentalScore) }}>
+                        <div class="flex justify-between mb-4">
+                            <Typography style={{ color: 'black'}} variant='h4'>Environmental Score:</Typography>
+                            <Typography variant='h4' style={{ color: getGradColor(getEnvironmentalScore) }}>{getEnvironmentalScore}</Typography>
+                        </div> 
+                        <LinearProgress variant="determinate" color='inherit' value={getEnvironmentalScore}></LinearProgress>
+                    </div>
+                    <div class="p-6 border rounded" style={{ color: getGradColor(getSocialScore) }}>
+                        <div class="flex justify-between mb-4">
+                            <Typography style={{ color: 'black'}} variant='h4'>Social Score:</Typography>
+                            <Typography variant='h4' style={{ color: getGradColor(getSocialScore) }}>{getSocialScore}</Typography>
+                        </div> 
+                        <span><LinearProgress variant="determinate" color='inherit' value={getSocialScore}></LinearProgress></span>
+                    </div>
+                </div>
+            </div>
+            
 
         </Card>
         </div>
