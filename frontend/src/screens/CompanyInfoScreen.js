@@ -134,13 +134,10 @@ const CompanyStockInfo = () => {
                     </Typography>
             </Typography>
         <Divider class="mt-5" variant="middle" />
-        <Card variant="outlined" class="flex justify-start p-6">
-            <CardContent class="w-full">
+        <Card variant="outlined" class="flex justify-start w-full p-6">
+            <CardContent>
                 {companyData ? (
-
-                    <div class="flex gap-6">
-
-                        <div class="flex flex-col gap-2">
+                        <div class="flex flex-col gap-2 pr-6">
                             <Typography
                                 variant="h6"
                                 class="text-4xl mb-2"
@@ -166,7 +163,6 @@ const CompanyStockInfo = () => {
                             <div class="p-2 border rounded">
                                 <div class="font-black borde">Employee Turnover: </div><i> {companyData.employeeTurnover}%</i>
                             </div>
-                        </div>
                         <Divider orientation="vertical" flexItem />
                     </div>
                 ) : (
