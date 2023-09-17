@@ -17,7 +17,7 @@ console.log(error)
     <AppBar position="static">
       <Toolbar>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          Sustain.io
+          <a class="title" href="/">Sustain.io</a>
         </Typography>
         {!isAuthenticated ? (<Button 
             color="inherit"

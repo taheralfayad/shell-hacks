@@ -5,10 +5,18 @@ import CompanyInputScreen from "./screens/CompanyInputScreen";
 import CompanyInfoScreen from "./screens/CompanyInfoScreen";
 import LoginScreen from "./screens/LoginScreen"
 import UploadScreen from "./screens/UploadScreen"
+import { createTheme, ThemeProvider } from '@mui/material';
 import './index.css'
+
+const theme = createTheme({
+  typography: {
+    fontFamily: 'Lato, sans-serif', // Replace with your desired font
+  }
+});
 
 export default function App() {
   return (
+    <ThemeProvider theme={theme}>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<CompanyInputScreen />} />
@@ -21,6 +29,7 @@ export default function App() {
         <Route path="/upload" element={<UploadScreen />}/>
       </Routes>
     </BrowserRouter>
+    </ThemeProvider>
   );
 }
 

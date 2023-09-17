@@ -33,7 +33,7 @@ export default function InputCompany() {
     };
 
     return(
-    <Card variant="outlined" sx={{ borderRadius: 2, boxShadow: 3, width: '50%'}}>
+    <Card variant="outlined" sx={{ width: '50%'}}>
         <CardContent>
             <Typography variant="h5" component="div" gutterBottom>
                 Enter Company Name
@@ -56,7 +56,7 @@ export default function InputCompany() {
                 />
                 <Button
                     variant="contained"
-                    color="primary"
+                    color="primary" 
                     component={selectedCompany ? Link : null}
                     to={selectedCompany ? '/' + selectedCompany.stockSymbol : null}
                     disabled={!selectedCompany}

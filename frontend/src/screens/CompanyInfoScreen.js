@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import Navbar from '../components/Navbar';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
+import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
 import Skeleton from '@mui/material/Skeleton';
 import { useParams, Link } from 'react-router-dom';
@@ -123,45 +125,49 @@ const CompanyStockInfo = () => {
     }, [companyData]);
 
     return (
-        <Card variant="outlined" sx={{ borderRadius: 2, boxShadow: 3 }}>
-            <CardContent>
-                <Typography variant="h5" component="div" gutterBottom>
-                    {loading ? 'Loading' : companyData.name} Information
-                </Typography>
+        <div>
+        <Navbar />
+            <Typography variant="h8" component="div"  class="text-5xl mt-2 p-2" gutterBottom>
+                    {loading ? 'Loading' : companyData.name}
+                    <Typography variant="h8"  component="div" class="text-2xl ml-1" gutterBottom>
+                        {loading ? '' : "(" + companyData.stockSymbol + ")"}
+                    </Typography>
+            </Typography>
+        <Divider class="mt-5" variant="middle" />
+        <Card variant="outlined" class="flex justify-start p-6">
+            <CardContent class="w-full">
                 {companyData ? (
-                    <div>
-                        <Typography
-                            variant="h6"
-                            component="div"
-                            sx={{ marginTop: 2 }}>
-                            Company Values:
-                        </Typography>
-                        <Typography variant="body1" gutterBottom>
-                            Carbon Emissions: {companyData.carbonEmissions}
-                        </Typography>
-                        <Typography variant="body1" gutterBottom>
-                            Renewable Energy Usage:{' '}
-                            {companyData.renewableEnergyUsage}
-                        </Typography>
-                        <Typography variant="body1" gutterBottom>
-                            Waste Generated: {companyData.wasteGenerated}
-                        </Typography>
-                        <Typography variant="body1" gutterBottom>
-                            Minority Diversity Percentage:{' '}
-                            {`${companyData.minorityDiversity}%`}
-                        </Typography>
-                        <Typography variant="body1" gutterBottom>
-                            Non-Profit Donations:{' '}
-                            {companyData.nonProfitContributions}
-                        </Typography>
-                        <Typography variant="body1" gutterBottom>
-                            Employee Turnover: {companyData.employeeTurnover}
-                        </Typography>
-                        {chartData ? (
-                            <Card sx={{ width: 500, height: 500 }}>
-                                <Radar data={chartData} options={options} />
-                            </Card>
-                        ) : null}
+
+                    <div class="flex gap-6">
+
+                        <div class="flex flex-col gap-2">
+                            <Typography
+                                variant="h6"
+                                class="text-4xl mb-2"
+                                component="div"
+                                sx={{ marginTop: 2 }}>
+                                Sustainability Metrics:
+                            </Typography>
+                            <div class="p-2 border rounded">
+                                <div class="font-black borde">Carbon Emissions:</div> {companyData.carbonEmissions} <i>kt CO2</i>
+                            </div>
+                            <div class="p-2 border rounded">
+                                <div class="font-black borde">Renewable Energy Usage: </div> {companyData.renewableEnergyUsage}<i>%</i>
+                            </div>
+                            <div class="p-2 border rounded">
+                                <div class="font-black borde">Waste Generated: </div> {companyData.wasteGenerated}<i> kt</i>
+                            </div>
+                            <div class="p-2 border rounded">
+                                <div class="font-black borde">Minority Diversity Percentage: </div> {companyData.minorityDiversity}<i>%</i>
+                            </div>
+                            <div class="p-2 border rounded">
+                                <div class="font-black borde">Non-Profit Donations: </div><i> {companyData.nonProfitContributions} million</i>
+                            </div>
+                            <div class="p-2 border rounded">
+                                <div class="font-black borde">Employee Turnover: </div><i> {companyData.employeeTurnover}%</i>
+                            </div>
+                        </div>
+                        <Divider orientation="vertical" flexItem />
                     </div>
                 ) : (
                     <div style={{ width: '15%' }}>
@@ -186,6 +192,8 @@ const CompanyStockInfo = () => {
                         />
                     </div>
                 )}
+
+                <div class="mt-5">
                 <Button
                     variant="contained"
                     color="primary"
@@ -193,8 +201,20 @@ const CompanyStockInfo = () => {
                     to={'/'}>
                     Go Back
                 </Button>
+                </div>
             </CardContent>
+
+            <div class="w-full flex border justify-center">
+            {chartData ? (
+                <div class="w-96 h-96 border">
+                    <Radar data={chartData} options={options} />
+                </div>
+
+            ) : null}
+            </div>
+
         </Card>
+        </div>
     );
 };
 
